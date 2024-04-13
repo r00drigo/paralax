@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
 
 :root {
+  --color-orange: #e98e72;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
 }
 /*=============== LAYOUT ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #e98e72;
+}
 .home {
   overflow: hidden;
   height: 100vh;
@@ -11,8 +24,8 @@
 
 .container {
   max-width: 100%;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
 }
 
 .grid {
@@ -21,14 +34,18 @@
 
 .xl-title {
   font-size: 6rem;
-  color: #fff;
   margin-bottom: 2rem;
   font-family: "Rowdies", sans-serif;
   font-weight: 400;
 }
 .l-title {
+  font-size: 4rem;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+}
+
+.m-title {
   font-size: 2.5rem;
-  color: #fff;
   font-family: "Rowdies", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -93,6 +110,28 @@ header {
   rotate: 90deg;
   left: 40px;
   bottom: -180px;
+}
+
+/*=============== PROJECTS ===============*/
+
+.projects-section {
+  background-color: var(--color-orange);
+}
+
+.projects-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects-box {
+  width: 100%;
+  border-radius: 15px;
+  padding: var(--mb-1-5);
+
+  overflow: hidden;
+}
+.projects-thumb {
+  width: 100%;
+  border-radius: 15px;
 }
 
 @media (min-width: 1200px) {
