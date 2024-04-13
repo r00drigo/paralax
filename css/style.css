@@ -33,25 +33,22 @@ body {
 }
 
 .xl-title {
-  font-size: 6rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
-  font-family: "Rowdies", sans-serif;
   font-weight: 400;
 }
 .l-title {
-  font-size: 4rem;
-  font-family: "Rowdies", sans-serif;
+  font-size: 2rem;
   font-weight: 300;
 }
 
 .m-title {
   font-size: 2.5rem;
-  font-family: "Rowdies", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 .text {
-  font-size: 2.5em;
+  font-size: 1em;
 }
 /*=============== HEADER ===============*/
 header {
@@ -62,7 +59,7 @@ header {
   padding: 20px;
 }
 .nav-logo {
-  width: 120px;
+  width: 60px;
 }
 
 /*=============== PARALAX ===============*/
@@ -92,57 +89,55 @@ header {
   width: 100%;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 45%;
   z-index: 2;
-}
-.scrolldown {
-  position: absolute;
-  z-index: 4;
-  bottom: 11%;
-  font-size: 2rem;
-  color: #fff;
-  rotate: 270deg;
-}
-.scrolldown::after {
-  position: absolute;
-  content: "";
-  width: 4px;
-  height: 356px;
-  background-color: #fff;
-  rotate: 90deg;
-  left: 40px;
-  bottom: -180px;
 }
 
 /*=============== PROJECTS ===============*/
 
 .projects-section {
-  margin-top: var(--mb-2);
-  background-color: var(--color-orange);
-}
-
-.projects-content {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.projects-title {
+  flex-direction: column;
+  gap: 30px;
   text-align: center;
-  padding-bottom: var(--mb-3);
 }
-.projects-box {
-  width: 100%;
-  border-radius: 15px;
-  padding: var(--mb-1-5);
+.projects-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
 
+.projects-box {
   overflow: hidden;
+  position: relative;
+  transition: 0.45s ease-in-out;
 }
 .projects-thumb {
+  border-radius: 20px;
   width: 100%;
-  border-radius: 15px;
+}
+
+.caption {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 10px;
+  top: 0;
+  opacity: 0;
+  transition: 0.9s;
+}
+
+.projects-box:hover .caption {
+  opacity: 1;
 }
 
 @media (min-width: 1200px) {
+  .container {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
   .paralax-img,
   .paralax-img-mountain,
   .paralax-img-sun,
@@ -151,9 +146,14 @@ header {
     height: auto;
     top: -200px;
   }
-}
-.paralax-img-cloud-r {
-  width: 100vw;
-  height: auto;
-  top: -100px;
+
+  .paralax-img-cloud-r {
+    width: 100vw;
+    height: auto;
+    top: -100px;
+  }
+  .projects-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
