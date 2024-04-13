@@ -50,7 +50,9 @@ body {
   font-weight: 300;
   font-style: normal;
 }
-
+.text {
+  font-size: 2.5em;
+}
 /*=============== HEADER ===============*/
 header {
   position: absolute;
@@ -115,12 +117,18 @@ header {
 /*=============== PROJECTS ===============*/
 
 .projects-section {
+  margin-top: var(--mb-2);
   background-color: var(--color-orange);
 }
 
 .projects-content {
   display: flex;
   flex-wrap: wrap;
+}
+
+.projects-title {
+  text-align: center;
+  padding-bottom: var(--mb-3);
 }
 .projects-box {
   width: 100%;
