@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --color-orange: #e98e72;
   --mb-1-5: 1.5rem;
@@ -33,22 +33,60 @@ body {
 }
 
 .xl-title {
+  font-family: "Exo 2", sans-serif;
   font-size: 3rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 .l-title {
-  font-size: 2rem;
-  font-weight: 300;
+  font-family: "Exo 2", sans-serif;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .m-title {
-  font-size: 2.5rem;
-  font-weight: 300;
-  font-style: normal;
+  font-family: "Exo 2", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
+.s-title {
+  font-family: "Exo 2", sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.xs-title {
+  font-family: "Exo 2", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .text {
   font-size: 1em;
+}
+.text-center {
+  width: 100%;
+  text-align: center;
+}
+
+.highlight {
+  color: #f8394a;
 }
 /*=============== HEADER ===============*/
 header {
@@ -87,12 +125,32 @@ header {
 
 .home-content {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: absolute;
   text-align: center;
   top: 45%;
   z-index: 2;
 }
 
+.btn {
+  display: inline-block;
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 0;
+  left: 42%;
+  fill: #fff;
+  z-index: 1;
+}
 /*=============== PROJECTS ===============*/
 
 .projects-section {
@@ -100,6 +158,7 @@ header {
   flex-direction: column;
   gap: 30px;
   text-align: center;
+  padding-bottom: 4rem;
 }
 .projects-content {
   display: grid;
@@ -132,8 +191,43 @@ header {
 .projects-box:hover .caption {
   opacity: 1;
 }
+/*=============== ABOUT ===============*/
 
-@media (min-width: 1200px) {
+.about-section {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.profile-img {
+  width: 100%;
+}
+
+/*=============== FOOTER ===============*/
+.footer-section {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+svg {
+  width: 50px;
+  margin-right: 20px;
+}
+.copy {
+  padding: 40px 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 600px) {
   .container {
     margin-left: 9rem;
     margin-right: 9rem;
@@ -143,8 +237,7 @@ header {
   .paralax-img-sun,
   .paralax-img-cloud-l {
     width: 105vw;
-    height: auto;
-    top: -200px;
+    height: 110vh;
   }
 
   .paralax-img-cloud-r {
