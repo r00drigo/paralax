@@ -48,12 +48,21 @@ p {
   text-transform: uppercase;
 }
 .l-title {
+  position: relative;
   font-family: "Exo 2", sans-serif;
   color: var(--color-text);
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.5;
   text-transform: uppercase;
+}
+
+.l-title::before {
+  position: absolute;
+  content: "";
+  border: 2px solid #f8394a;
+  width: 50%;
+  bottom: 0;
 }
 
 .m-title {
@@ -220,13 +229,13 @@ header {
   top: 0;
   opacity: 0;
   transition: 0.6s ease-in-out;
-  background-color: #f8394a;
+  background-color: #133862;
   border-radius: 15px;
   text-align: center;
 }
 
 .caption a {
-  color: #1c304a;
+  color: #f8394a;
   font-weight: 800;
   text-decoration: none;
 }
