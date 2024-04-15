@@ -285,10 +285,10 @@ svg {
   z-index: -1;
 }
 
-@media only screen and (orientation: landscape) {
+@media (orientation: landscape) {
   .container {
-    margin-left: 9rem;
-    margin-right: 9rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
   .paralax-img,
   .paralax-img-mountain,
@@ -303,8 +303,16 @@ svg {
     height: auto;
     top: -100px;
   }
+
   .projects-content {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 }
