@@ -57,14 +57,6 @@ p {
   text-transform: uppercase;
 }
 
-.l-title::before {
-  position: absolute;
-  content: "";
-  border: 2px solid #f8394a;
-  width: 50%;
-  bottom: 0;
-}
-
 .m-title {
   font-family: "Exo 2", sans-serif;
   color: var(--color-text);
