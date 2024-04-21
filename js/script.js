@@ -1,3 +1,5 @@
+//PARALAX
+
 let sun = document.getElementById("sun");
 let cloudL = document.getElementById("cloud-l");
 let cloudR = document.getElementById("cloud-r");
@@ -15,4 +17,23 @@ window.addEventListener("scroll", () => {
   cloudR.style.left = value * 0.5 + "px";
 
   scroll.style.bottom = value * 1 + "px";
+});
+
+//ITENS PROJECT
+
+let projectBox = document.querySelector(".projects-item");
+let projectBoxContent = document.querySelector(".projects-box");
+let closeProject = document.querySelector(".closebtn");
+let body = document.querySelector("body");
+
+// OPEN MODAL
+projectBox.addEventListener("click", () => {
+  projectBoxContent.classList.toggle("open");
+  if (projectBoxContent.classList.contains("open")) {
+    body.classList.add("remove-scrolling");
+  }
+});
+closeProject.addEventListener("click", () => {
+  projectBoxContent.classList.remove("open");
+  body.classList.remove("remove-scrolling");
 });
