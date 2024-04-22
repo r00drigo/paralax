@@ -17,10 +17,18 @@
     <header>
       <nav class="nav-menu">
         <img src="img/logo2.png" class="nav-logo" />
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <ul class="nav-hamburguer">
+          <li>HOME</li>
+          <li>PROJECTS</li>
+          <li>ABOUT</li>
+          <li>CONTACTS</li>
+        </ul>
+
         <div class="menu-hamburguer">
-          <span class="line-hamburger"></span>
-          <span class="line-hamburger"></span>
-          <span class="line-hamburger"></span>
+          <span class="line-hamburger1 change-lines-hamburger"></span>
+          <span class="line-hamburger2"></span>
+          <span class="line-hamburger3"></span>
         </div>
       </nav>
     </header>
@@ -49,15 +57,28 @@
     <section class="projects-section container">
       <h2 class="l-title text-center">Projects</h2>
       <div class="projects-content grid">
-        <div class="projects-item">
+        <div class="projects-item" data-modal-id="modal1">
           <img src="img/warrrior.png" />
         </div>
-        <div class="projects-box">
-          <article class="projects-box-content">
-            <p class="closebtn">X</p>
-            <img src="img/warriors-sitejpg" alt="Site Warriors Family">
+        <div class="projects-item" data-modal-id="modal2">
+          <img src="img/hotel.png" />
+        </div>
+        <div class="projects-item" data-modal-id="modal3">
+          <img src="img/nutrition.png" />
+        </div>
+
+        <!-- Modais -->
+        <div id="modal1" class="projects-box">
+          <article class="projects-item-content">
+            <p class="close-btn">X</p>
+            <img src="img/warriors-site.jpg" />
             <h3 class="s-title">Warriors Family</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus provident, similique voluptate delectus cumque fugit laboriosam at est obcaecati in, explicabo, cum placeat? Iste, vero ipsa. Facilis at enim pariatur.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
+              provident, similique voluptate delectus cumque fugit laboriosam at
+              est obcaecati in, explicabo, cum placeat? Iste, vero ipsa. Facilis
+              at enim pariatur.
+            </p>
             <ul class="projects-box-icon">
               <li>- HTML</li>
               <li>- CSS</li>
@@ -65,7 +86,23 @@
             </ul>
             <a class="btn">View Project</a>
           </article>
-        <div>
+        </div>
+
+        <div id="modal2" class="projects-box">
+          <div class="projects-item-content">
+            <span class="close-btn">&times;</span>
+            <h2>Modal 2</h2>
+            <p>Conteúdo do Modal 2.</p>
+          </div>
+        </div>
+
+        <div id="modal3" class="projects-box">
+          <div class="projects-item-content">
+            <span class="close-btn">&times;</span>
+            <h2>Modal 3</h2>
+            <p>Conteúdo do Modal 3.</p>
+          </div>
+        </div>
       </div>
     </section>
 

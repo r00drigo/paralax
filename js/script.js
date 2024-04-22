@@ -19,21 +19,37 @@ window.addEventListener("scroll", () => {
   scroll.style.bottom = value * 1 + "px";
 });
 
-//ITENS PROJECT
+document.addEventListener("DOMContentLoaded", function () {
+  var items = document.querySelectorAll(".projects-item");
 
-let projectBox = document.querySelector(".projects-item");
-let projectBoxContent = document.querySelector(".projects-box");
-let closeProject = document.querySelector(".closebtn");
-let body = document.querySelector("body");
+  // Adiciona um evento de clique a cada item
+  items.forEach(function (item) {
+    item.addEventListener("click", function () {
+      const modalId = item.getAttribute("data-modal-id");
+      openModal(modalId);
+    });
+  });
 
-// OPEN MODAL
-projectBox.addEventListener("click", () => {
-  projectBoxContent.classList.toggle("open");
-  if (projectBoxContent.classList.contains("open")) {
-    body.classList.add("remove-scrolling");
-  }
+  // Adiciona um evento de clique para fechar o modal
+  var closeButtons = document.querySelectorAll(".close-btn");
+  closeButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const modal = button.closest(".projects-box");
+      closeModal(modal.id);
+    });
+  });
 });
-closeProject.addEventListener("click", () => {
-  projectBoxContent.classList.remove("open");
+
+const body = document.querySelector("body");
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  body.classList.add("remove-scrolling");
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "none";
   body.classList.remove("remove-scrolling");
-});
+}

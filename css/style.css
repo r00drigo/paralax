@@ -18,6 +18,7 @@
 body {
   background-color: #3d6ca3;
   color: var(--color-text);
+  overflow: hidden;
 }
 
 .home {
@@ -107,22 +108,74 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 2rem 3rem;
 }
+.nav-menu .checkbox {
+  position: absolute;
+  right: 5rem;
+  z-index: 1;
+  height: 35px;
+  width: 35px;
+  opacity: 0;
+}
+
+.menu-items {
+  height: 100vh;
+  background-color: #f8394a;
+  position: absolute;
+  font-size: 3rem;
+}
+
 .nav-logo {
   width: 60px;
 }
-.line-hamburger {
-  display: block;
-  width: 50px;
-  height: 4px;
-  margin-bottom: 8px;
-  background-color: #fff;
-  border-radius: 15px;
+.menu-hamburguer {
+  position: relative;
+  margin: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
 }
-.line-hamburger:nth-of-type(3) {
-  width: 30px;
-  margin-left: 20px;
+.line-hamburger1,
+.line-hamburger2,
+.line-hamburger3 {
+  height: 5px;
+  background: white;
+  border-radius: 5px;
+  margin: 3px 0;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+.nav-hamburguer {
+  position: fixed;
+  width: 100%;
+  background-color: #123862;
+  font-size: 4rem;
+  display: none;
+}
+.line-hamburger3 {
+  width: 25px;
+}
+.nav-menu input[type="checkbox"]:checked ~ .nav-hamburguer {
+  transform: rotate(45deg);
+}
+.nav-menu input[type="checkbox"]:checked ~ .menu-hamburguer .line-hamburger1 {
+  transform: rotate(45deg);
+}
+.nav-menu input[type="checkbox"]:checked ~ .menu-hamburguer .line-hamburger2 {
+  display: none;
+}
+.nav-menu input[type="checkbox"]:checked ~ .menu-hamburguer .line-hamburger3 {
+  transform: rotate(-45deg);
+  width: 43px;
+}
+.nav-menu input[type="checkbox"]:checked ~ .menu-hamburguer .line-hamburger3 {
+  transform: rotate(-45deg);
+  width: 43px;
 }
 /*=============== PARALAX ===============*/
 .paralax {
@@ -164,11 +217,9 @@ header {
 }
 
 .btn {
-  min-width: 150px;
-  max-height: 250px;
+  display: block;
+  width: 100px;
   margin-top: 10px;
-  text-align: center;
-  font-weight: 800;
   padding: 10px;
   border: 1px solid #fff;
   color: var(--color-text);
@@ -203,15 +254,13 @@ header {
 }
 
 .projects-item {
+  cursor: pointer;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  background-color: #f8394a;
   border-radius: 15px;
-  border: 1px solid #fff;
-  padding: 1rem;
   overflow: hidden;
 }
 
@@ -226,7 +275,7 @@ header {
   display: none;
 }
 
-.projects-box-content {
+.projects-item-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -245,7 +294,7 @@ header {
 .open {
   display: block;
 }
-.closebtn {
+.close-btn {
   position: absolute;
   right: 10px;
   font-size: 2.5rem;
