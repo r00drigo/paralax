@@ -17,12 +17,11 @@
     <header>
       <nav class="nav-menu">
         <img src="img/logo2.png" class="nav-logo" />
-        <input class="checkbox" type="checkbox" name="" id="" />
+        <input class="checkbox" type="checkbox" />
         <ul class="nav-hamburguer">
-          <li>HOME</li>
-          <li>PROJECTS</li>
-          <li>ABOUT</li>
-          <li>CONTACTS</li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contacts">CONTACT</a></li>
         </ul>
 
         <div class="menu-hamburguer">
@@ -54,7 +53,7 @@
     </section>
 
     <!-----PROJECTS-------->
-    <section class="projects-section container">
+    <section class="projects-section container" id="projects">
       <h2 class="l-title text-center">Projects</h2>
       <div class="projects-content grid">
         <div class="projects-item" data-modal-id="modal1">
@@ -69,22 +68,24 @@
 
         <!-- Modais -->
         <div id="modal1" class="projects-box">
-          <article class="projects-item-content">
+          <article class="projects-item-box">
             <p class="close-btn">X</p>
-            <img src="img/warriors-site.jpg" />
-            <h3 class="s-title">Warriors Family</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
-              provident, similique voluptate delectus cumque fugit laboriosam at
-              est obcaecati in, explicabo, cum placeat? Iste, vero ipsa. Facilis
-              at enim pariatur.
-            </p>
-            <ul class="projects-box-icon">
-              <li>- HTML</li>
-              <li>- CSS</li>
-              <li>- JavaScript</li>
-            </ul>
-            <a class="btn">View Project</a>
+            <img src="img/warriors-site.jpg" class="projects-item-box-img" />
+            <div class="projects-item-content">
+              <h3 class="s-title">Warriors Family</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ducimus provident, similique voluptate delectus cumque fugit
+                laboriosam at est obcaecati in, explicabo, cum placeat? Iste,
+                vero ipsa. Facilis at enim pariatur.
+              </p>
+              <ul class="projects-box-icon">
+                <li>- HTML</li>
+                <li>- CSS</li>
+                <li>- JavaScript</li>
+              </ul>
+              <a class="btn">View Project</a>
+            </div>
           </article>
         </div>
 
@@ -107,18 +108,17 @@
     </section>
 
     <!-----ABOUT ME -------->
-    <div class="wrapper-section">
+    <div class="wrapper-section" id="about">
       <h2 class="l-title text-center">ABOUT ME</h2>
-      <section class="about-section container">
-        <div class="about-content grid">
+      <section class="container">
+        <div class="about-box">
           <img src="img/profile.png" class="profile-img" />
-          <div>
-            <h3 class="m-title text-center">Lorem</h3>
+          <div class="about-content">
             <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-              vitae delectus omnis placeat architecto alias in at itaque quo
-              nobis explicabo accusantium quod cupiditate error similique amet
-              voluptate ea? Adipisci.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatibus hic itaque fuga atque iste, neque tempora repudiandae
+              quae ducimus aliquam eos nihil maiores impedit expedita, magnam
+              ipsam! Deleniti, facere aliquid?
             </p>
             <button>Download CV</button>
           </div>
@@ -126,7 +126,7 @@
       </section>
     </div>
     <!-----FOOTER-------->
-    <footer class="footer-section container">
+    <footer class="footer-section" id="contacts">
       <h2 class="l-title">Get In Touch</h2>
       <h3 class="s-title">Have a question or want to work together?</h3>
       <div class="icon-box">
