@@ -49,6 +49,7 @@ body {
   letter-spacing: 1px;
   line-height: 1.2;
   text-transform: uppercase;
+  text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.4);
 }
 .l-title {
   position: relative;
@@ -58,6 +59,7 @@ body {
   font-weight: 600;
   line-height: 4;
   text-transform: uppercase;
+  text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
 .m-title {
@@ -67,6 +69,7 @@ body {
   font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
+  text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.4);
 }
 .s-title {
   font-family: "Exo 2", sans-serif;
@@ -99,14 +102,15 @@ body {
 }
 
 .highlight {
-  color: #f8394a;
+  color: #d92344;
+  text-shadow: 0;
 }
 /*=============== HEADER ===============*/
 header {
   display: fixed;
   width: 100%;
   position: absolute;
-  z-index: 3;
+  z-index: 6;
 }
 .nav-menu {
   display: flex;
@@ -210,7 +214,7 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
 
 .paralax-img-floorone {
   position: absolute;
-  z-index: 5;
+  z-index: 4;
   height: 170vh;
 }
 .paralax-img-floortwo {
@@ -230,7 +234,7 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
   gap: 20px;
   position: absolute;
   text-align: center;
-  z-index: 4;
+  z-index: 5;
 }
 .home-button-box {
   display: flex;
@@ -253,13 +257,6 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
   background-color: #f8394a;
 }
 
-.scrolldown {
-  position: absolute;
-  bottom: 0;
-  left: 42%;
-  fill: #fff;
-  z-index: 1;
-}
 /*=============== PROJECTS ===============*/
 
 .projects-section {
@@ -270,13 +267,16 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
 .projects-content {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
+  padding: 10px;
 }
 
 .projects-item {
   cursor: pointer;
-  width: 96%;
+  width: 100%;
   border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 0 2px #fff, 8px 8px 0 0 #fff;
 }
 
 .projects-box {
@@ -305,9 +305,10 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
   position: relative;
   margin: 4rem auto;
   width: 80%;
-  background-color: rgb(18, 56, 98);
+  background-color: #1b1b1b;
   padding: 20px;
   border-radius: 15px;
+  box-shadow: 0 0 0 2px #fff, 8px 8px 0 0 #fff;
 }
 
 .open {
@@ -337,7 +338,6 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
 
 /*=============== ABOUT ===============*/
 .wrapper-section {
-  background-color: #123862;
   padding-bottom: 5rem;
 }
 
@@ -349,7 +349,12 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
 }
 
 .profile-img {
-  width: 100%;
+  align-items: center;
+  width: 95%;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 0 2px #fff, 8px 8px 0 0 #fff;
+  margin: 30px;
 }
 
 /*=============== FOOTER ===============*/
@@ -378,6 +383,40 @@ svg {
   bottom: 0;
   z-index: -1;
 }
+
+.move-x-l {
+  opacity: 0;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transform: translateX(-50%);
+}
+.move-x-r {
+  opacity: 0;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transform: translateX(50%);
+}
+.move-y-u {
+  opacity: 0;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transform: translateY(-50%);
+}
+.move-y-d {
+  opacity: 0;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transform: translateY(50%);
+}
+.visible {
+  opacity: 1;
+  transition-duration: 2s;
+  filter: blur(10px, 0);
+
+  -webkit-transition-duration: 2s;
+  transform: translateY(0%);
+}
+
 /*MOBILE LANDSCAPE*/
 @media only screen and (max-height: 430px) {
   .paralax-img,
@@ -407,7 +446,7 @@ svg {
   .projects-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 2fr;
     gap: 30px;
   }
   .projects-item-box {

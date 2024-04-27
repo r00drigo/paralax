@@ -1,3 +1,21 @@
+const myObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    } else {
+      entry.target.classList.remove("visible");
+    }
+  });
+});
+const elements = document.querySelectorAll([
+  ".move-x-l",
+  ".move-x-r",
+  ".move-y-u",
+  ".move-y-d",
+]);
+
+elements.forEach((element) => myObserver.observe(element));
+
 //PARALAX
 
 window.addEventListener("scroll", () => {
@@ -10,11 +28,17 @@ window.addEventListener("scroll", () => {
   let floorTwo = document.querySelector("#floortwo");
 
   floorTwo.style.left = value * -1.5 + "px";
-  up.style.top = value * 0.5 + "px";
+  up.style.top = value * 1 + "px";
   mont.style.top = value * 0.5 + "px";
   sun.style.top = value * 1.5 + "px";
   cloudL.style.left = value * -1 + "px";
   cloudR.style.left = value * 0.5 + "px";
+
+  if (value >= 200) {
+    up.style.zIndex = 2;
+  } else {
+    up.style.zIndex = 5;
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
