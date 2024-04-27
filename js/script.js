@@ -1,22 +1,22 @@
 //PARALAX
 
-let sun = document.getElementById("sun");
-let cloudL = document.getElementById("cloud-l");
-let cloudR = document.getElementById("cloud-r");
-let scroll = document.getElementById("scrolldown");
-let arbustoT1 = document.getElementById("arbusto-t1");
-let arbustoT2 = document.getElementById("arbusto-t2");
-let arbustoF1 = document.getElementById("arbusto-f1");
-let arbustoF2 = document.getElementById("arbusto-f2");
-
 window.addEventListener("scroll", () => {
   let value = window.scrollY;
+  let sun = document.getElementById("sun");
+  let cloudL = document.getElementById("cloud-l");
+  let cloudR = document.getElementById("cloud-r");
+  let mont = document.querySelector("#mont");
+  let up = document.querySelector("#up");
+  let floor = document.querySelector("#floor");
+  let floorTwo = document.querySelector("#floortwo");
 
-  sun.style.top = value * 1 + "px";
-  cloudL.style.left = value * -1.5 + "px";
+  floor.style.left = value * 0.1 + "px";
+  floorTwo.style.left = value * -1.5 + "px";
+  up.style.top = value * 0.5 + "px";
+  mont.style.top = value * 0.5 + "px";
+  sun.style.top = value * 1.5 + "px";
+  cloudL.style.left = value * -1 + "px";
   cloudR.style.left = value * 0.5 + "px";
-
-  scroll.style.bottom = value * 1 + "px";
 });
 
 document.addEventListener("DOMContentLoaded", function () {
