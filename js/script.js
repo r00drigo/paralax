@@ -7,10 +7,8 @@ window.addEventListener("scroll", () => {
   let cloudR = document.getElementById("cloud-r");
   let mont = document.querySelector("#mont");
   let up = document.querySelector("#up");
-  let floor = document.querySelector("#floor");
   let floorTwo = document.querySelector("#floortwo");
 
-  floor.style.left = value * 0.1 + "px";
   floorTwo.style.left = value * -1.5 + "px";
   up.style.top = value * 0.5 + "px";
   mont.style.top = value * 0.5 + "px";

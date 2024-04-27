@@ -211,11 +211,12 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
 .paralax-img-floorone {
   position: absolute;
   z-index: 5;
-  height: 160vh;
+  height: 170vh;
 }
 .paralax-img-floortwo {
   position: absolute;
   z-index: 3;
+  height: 150vh;
 }
 
 /*=============== HOME ===============*/
