@@ -75,3 +75,9 @@ function closeModal(modalId) {
   modal.style.display = "none";
   body.classList.remove("remove-scrolling");
 }
+window.addEventListener("scroll", () => {
+  let checkbox = document.querySelector("input[type='checkbox']:checked");
+  if (checkbox) {
+    checkbox.checked = false;
+  }
+});
