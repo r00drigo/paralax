@@ -169,6 +169,7 @@ header {
   text-decoration: none;
 }
 .nav-hamburguer a:visited {
+  text-decoration: none;
   color: #fff;
 }
 
