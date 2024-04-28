@@ -15,6 +15,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: #1b1b1b;
   color: var(--color-text);
@@ -297,6 +298,8 @@ button {
 
 .projects-item:hover {
   background-color: #d92344;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .projects-box {
@@ -402,8 +405,8 @@ button {
 }
 svg:hover {
   fill: #d92344;
-  transition-duration: 1s;
-  -webkit-transition-duration: 1s;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
 }
 svg {
   fill: #fff;
