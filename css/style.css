@@ -201,6 +201,59 @@ input[type="checkbox"]:checked ~ .nav-hamburguer {
 
 .nav-list {
   display: none;
+  margin: 2.5rem;
+}
+.nav-list li {
+  display: inline-block;
+  margin-right: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2;
+  font-weight: 600s;
+}
+
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 30px;
+}
+
+.efect-hover {
+  background-image: linear-gradient(to right, #d92344, #d92344 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.efect-hover:before {
+  content: "";
+  background: #d92344;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.efect-hover:hover {
+  background-position: 0;
+}
+
+.efect-hover:hover::before {
+  width: 100%;
+}
+
+.efect-hover:hover::after {
+  content: "";
+  width: 5px;
+  background: #1b1b1b;
 }
 
 /*=============== PARALAX ===============*/
@@ -486,7 +539,7 @@ svg {
   .paralax-img-mountain,
   .paralax-img-sun,
   .paralax-img-cloud-l {
-    width: 101%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 540px) {
@@ -541,7 +594,7 @@ svg {
 
 @media only screen and (min-width: 769px) {
   .xl-title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .l-title {
     font-size: 3.5rem;
@@ -595,6 +648,15 @@ svg {
     width: 50%;
     height: 50%;
   }
+  .menu-hamburguer {
+    display: none;
+  }
+  .checkbox {
+    display: none;
+  }
+  .nav-list {
+    display: block;
+  }
 }
 @media only screen and (min-width: 1025px) {
   .xl-title {
@@ -629,73 +691,24 @@ svg {
   .checkbox {
     display: none;
   }
-  .nav-list {
-    display: block;
-    margin: 2.5rem;
-  }
-  .nav-list li {
-    display: inline-block;
-    margin-right: 1rem;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2;
-    font-weight: 600s;
-  }
 
-  .projects-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    gap: 30px;
-  }
-
-  .efect-hover {
-    background-image: linear-gradient(to right, #d92344, #d92344 50%, #fff 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .efect-hover:before {
-    content: "";
-    background: #d92344;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .efect-hover:hover {
-    background-position: 0;
-  }
-
-  .efect-hover:hover::before {
-    width: 100%;
-  }
-
-  .efect-hover:hover::after {
-    content: "";
-    width: 5px;
-    background: #1b1b1b;
-  }
   .paralax-img,
   .paralax-img-mountain,
   .paralax-img-sun,
   .paralax-img-cloud-l {
-    width: 101%;
+    width: 110%;
   }
 
   .about-box {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 30px;
+  }
+  .projects-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     gap: 30px;
   }
 }
