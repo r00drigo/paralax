@@ -1,3 +1,9 @@
+window.onload = function () {
+  setTimeout(function () {
+    let preLoadElement = document.querySelector(".pre-load");
+    preLoadElement.style.display = "none";
+  }, 2700);
+};
 const myObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
